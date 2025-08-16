@@ -5,11 +5,7 @@
 Este tópico deve ser ignorado, pois ele é uma metodologia que uso pra ensinar quem está comigo
 # Exercicio C
 
-    Faça um codigo q receba um número, se o numero for 1, diga "a", se for 2, diga "b" e se não for nenhum desses, diga "c"
-
-
-
-
+    Faça um código que peça pro usuario digitar um numero até ele digitar 5, quando ele digitar 5, sai
 
 # Código base 
 
@@ -37,6 +33,19 @@ Este tópico deve ser ignorado, pois ele é uma metodologia que uso pra ensinar 
     Float -> Numero com virgula -> Normalmente colocamos um f no final da variável Ex: float a = 15.2f
 
     Double -> Numero com virgula
+
+# Comentário
+
+    Vc pode comentar parte dó codigo para q o programador q ler possa entender sua lógica
+    Vc usa "//" para comentários de uma linha
+    ou
+    Vc usa:
+    /* 
+        Comentario
+    */
+    Para comentarios de varias linhas
+
+    Detalhe: O computador irá ignorar comentários na hora de rodar o código
 
 # Definição de variaveis
 
@@ -71,6 +80,8 @@ Este tópico deve ser ignorado, pois ele é uma metodologia que uso pra ensinar 
     scanf("%(primeira letra do tipo da variavel)", &variavel);
 
     Ex: scanf("%i", &idade);
+
+
 
 # If
 
@@ -122,3 +133,57 @@ Este tópico deve ser ignorado, pois ele é uma metodologia que uso pra ensinar 
 
 
     Lembre-se: Sempre que for fazer uma verificação de igualdade vc usará 2 iguais "=="
+
+# Switch
+
+    Existe uma alternativa de verificação de igualdade, chama-se switch
+
+    O Switch APENAS VERIFICA IGUALDADES
+
+    Sintaxe:
+
+    switch(variavel){
+        case valorQueVoceQuerVerificar:
+            // código;
+            break;
+        case valorQueVoceQuerVerificar:
+            // código;
+            break;
+        case valorQueVoceQuerVerificar:
+            // código;
+            break;
+        default:
+            // codigo caso nenhum dos cases tenha funcionado, é tipo um "else"
+        
+    }
+
+
+# Laços de repetição
+    Existem 3 tipos: For, while e o Do While
+
+    ## For
+        O for será usado quando vc sabe quantas vezes o codigo vai rodar
+
+        Obs: Se seu For for contar de forma crescente, você usará "++", se for decrescente, usará "--"
+
+            Inicio                                 Quando parar   Passo
+        for(int contador = valorPorOndeVaiComecar; expressao;     contador++){
+            printf("%n", contador);
+        }
+    
+    
+    ## While
+        O while será usado enquanto uma expressão for verdadeira
+
+        while(expressao){
+            // Codigo
+        }
+
+
+    ## Do while
+
+    Sintaxe:
+    do{
+
+    }while(expressao);
+
