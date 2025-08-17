@@ -34,18 +34,6 @@ Este tópico deve ser ignorado, pois ele é uma metodologia que uso pra ensinar 
 
     Double -> Numero com virgula
 
-# Comentário
-
-    Vc pode comentar parte dó codigo para q o programador q ler possa entender sua lógica
-    Vc usa "//" para comentários de uma linha
-    ou
-    Vc usa:
-    /* 
-        Comentario
-    */
-    Para comentarios de varias linhas
-
-    Detalhe: O computador irá ignorar comentários na hora de rodar o código
 
 # Definição de variaveis
 
@@ -81,6 +69,18 @@ Este tópico deve ser ignorado, pois ele é uma metodologia que uso pra ensinar 
 
     Ex: scanf("%i", &idade);
 
+# Comentário
+
+    Vc pode comentar parte do codigo para que o programador que ler possa entender sua lógica
+    Vc usa "//" para comentários de uma linha
+    ou
+    Vc usa:
+    /* 
+        Comentario
+    */
+    Para comentarios de varias linhas
+
+    Detalhe: O computador irá ignorar comentários na hora de rodar o código
 
 
 # If
@@ -159,10 +159,10 @@ Este tópico deve ser ignorado, pois ele é uma metodologia que uso pra ensinar 
 
 
 # Laços de repetição
-    Existem 3 tipos: For, while e o Do While
+    Existem 3 tipos: For, While e o Do While
 
     ## For
-        O for será usado quando vc sabe quantas vezes o codigo vai rodar
+        O for será usado quando você sabe quantas vezes o codigo vai rodar
 
         Obs: Se seu For for contar de forma crescente, você usará "++", se for decrescente, usará "--"
 
@@ -173,17 +173,20 @@ Este tópico deve ser ignorado, pois ele é uma metodologia que uso pra ensinar 
     
     
     ## While
-        O while será usado enquanto uma expressão for verdadeira
+        O while irá rodar enquanto uma expressão for verdadeira. Nós o usamos quando não sabemos quantas vezes o código vai rodar
 
         while(expressao){
-            // Codigo
+            // Código
         }
+
+        Detalhe: O while faz a verificação da expressão antes de rodar o código que está dentro dele
 
 
     ## Do while
+        Exatamente igual ao while, a única diferença é que o Do While faz a verificação da expressão depois de rodar o código de dentro, então ele sempre vai executar o código dentro dele pelo menos 1 vez
 
-    Sintaxe:
-    do{
-
-    }while(expressao);
+        Sintaxe:
+        do{
+            // Código
+        }while(expressao);
 
