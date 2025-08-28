@@ -265,3 +265,54 @@ while expressao:
 Obs: O `while` faz a verificação da expressão antes de rodar o código que está dentro dele e caso a expressão seja verdadeira, ele roda o código que está dentro dele
 
 
+
+## Definição de funções
+
+Em python para definirmos funções usamos a palavra `def`
+Funções são porções de códigos reutilizaveis que você pode chamar sempre que quiser que aquela porção rode.
+
+Sintaxe criar:
+
+```Python
+def numeFuncao():
+    # Código
+```
+Sintaxe usar:
+```Python
+nomeFuncao()
+```
+
+Ex criar:
+```Python
+def contagemRegressiva():
+    # Código
+```
+Ex usar:
+```Python
+contagemRegressiva()
+```
+
+Você pode também passar valores para a função usar dentro da função:
+Detalhe: Você pode passar quantos valores quiser, mas eles precisam ser declarados na hora de criar a função
+
+Sintaxe criar:
+```Python
+def nomeFuncao(valor):
+    # Código
+```
+
+Sintaxe usar:
+```Python
+nomeFuncao(valor)
+```
+
+Ex criar:
+```Python
+def somarUm(numero):
+    print(numero + 1)
+```
+
+Ex usar:
+```Python
+somarUm(10)
+```
