@@ -266,7 +266,7 @@ Obs: O `while` faz a verificação da expressão antes de rodar o código que es
 
 
 
-## Definição de funções
+# Definição de funções
 
 Em python para definirmos funções usamos a palavra `def`
 Funções são porções de códigos reutilizaveis que você pode chamar sempre que quiser que aquela porção rode.
@@ -315,4 +315,139 @@ def somarUm(numero):
 Ex usar:
 ```Python
 somarUm(10)
+```
+
+# Lista
+
+Listas são variáveis que conseguem guardar vários valores
+
+## Criar
+
+Para criar uma lista fazemos da seguinte forma:
+
+Detalhe importante: Todo valor dentro de uma lista tem um tipo de "endereço", é uma contagem que começa do 0.
+Então se eu tenho uma lista com 5 valores dentro, a contagem interna vai de 0 até 4
+
+### Sintaxe
+
+```Python
+variavel = []
+```
+
+Ou podemos criar com os valores já definidos
+
+```Python
+variavel = [1, "guilherme", True, 3.14, 12]
+```
+Obs: Os valores sempre são separados por virgulas
+
+Ex:
+```Python
+frutas = ["Maçã", "Pera", "Abacate"]
+```
+
+## Adicionar valores na lista
+
+Caso queira adicionar valores na lista já existente, nós usamos a função `append()`:
+
+### Sintaxe
+
+```Python
+nomeDaLista.append(valorASerAdicionado)
+```
+
+Ex:
+```Python
+frutas = ["Maçã", "Pera", "Abacate"]
+frutas.append("Mamão")
+```
+
+## Remover valores na lista
+
+Para remover valores que estão na lista, usamos a função `pop()`
+
+### Sintaxe
+
+```Python
+nomeDaLista.pop(endereçoDoValorDentroDaLista)
+```
+Obs: Lembrando que cada valor dentro de uma lista tem um endereço que é uma contagem que começa do 0
+Então se você quiser apagar o primeiro valor por exemplo, o endereço dele é 0
+
+Ex:
+```Python
+frutas = ["Maçã", "Pera", "Abacate", "Mamão", "Melancia"]
+
+frutas.pop(3)
+# Apagará a fruta "Mamão" 
+```
+
+## Pegando valores dentro da lista
+
+Para pegar um valor dentro de uma lista, basta chamar o nome da lista e passar o endereço do valor entre colchetes: `[]`
+
+### Sintaxe
+
+```Python
+nomeDaLista[endereçoDoValorDentroDaLista]
+```
+Obs: Lembrando que cada valor dentro de uma lista tem um endereço que é uma contagem que começa do 0
+Então se você quiser apagar o primeiro valor por exemplo, o endereço dele é 0
+
+Ex:
+```Python
+frutas = ["Maçã", "Pera", "Abacate", "Mamão", "Melancia"]
+
+print(frutas[2])
+# Mostrará a fruta "Abacate"
+```
+
+
+
+## Alterar valores na lista
+
+Caso queira alterar algum valor que está dentro de uma lista, basta pegar o valor e alterá-lo normalmente
+
+### Sintaxe
+
+```Python
+nomeDaLista[endereçoDoValorDentroDaLista] = novoValor
+```
+Obs: Lembrando que cada valor dentro de uma lista tem um endereço que é uma contagem que começa do 0
+Então se você quiser apagar o primeiro valor por exemplo, o endereço dele é 0
+
+Ex:
+```Python
+frutas = ["Maçã", "Pera", "Abacate", "Mamão", "Melancia"]
+
+frutas[1] = "Banana"
+# Agora a lista ficou assim: ["Maçã", "Banana", "Abacate", "Mamão", "Melancia"]
+```
+
+## Iterar pela lista
+
+Caso você precise acessar todos os items de uma lista individualmente, existe uma forma de fazer isso com o `for`
+
+### Sintaxe
+
+```Python
+for valor in lista:
+    # Código
+```
+
+O `for` irá rodar por cada item dentro da `lista` e atribuirá o valor em `valor`
+
+Ex:
+```Python
+frutas = ["Maçã", "Pera", "Abacate", "Mamão", "Melancia"]
+
+for fruta in frutas:
+    print(fruta)
+
+# O resultado será o seguinte:
+# Maçã
+# Pera
+# Abacate
+# Mamão
+# Melancia
 ```
