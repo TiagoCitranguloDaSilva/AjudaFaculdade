@@ -1,11 +1,4 @@
-### Este arquivo foi feito para ajudar a lembrar os conceitos principais da linguagem C e poderá sofrer alterações sem aviso prévio e contém erros de português visto que foi escrito com pressa!
-
-
-<!-- 
-Este tópico deve ser ignorado, pois ele é uma metodologia que uso pra ensinar quem está comigo
-# Exercicio C
-Faça um código que peça pro usuario digitar um numero até ele digitar 5, quando ele digitar 5, sai 
--->
+### Este arquivo foi feito para ajudar a lembrar os conceitos principais da linguagem C e poderá sofrer alterações sem aviso prévio e contém erros de português, pois foi escrito com pressa!
 
 # Código base do C
 
@@ -283,8 +276,11 @@ Ex:
 int nomeArray[] = {7, 12};
 ```
 
+
+
+## Como pegar valores
 Como acessar os itens de uma array
-Sintaxe:
+### Sintaxe:
 ```C
 nomeArray[posicaoDoValorDentroDaArray];
 ```
@@ -303,7 +299,197 @@ nomeArray[posicaoDoValorDentroDaArray] = valorNovo;
 
 Ex:
 ```C
-numeros[3] = 5;
+numeros[3] = 3;
+```
+
+# Ponteiros
+Ponteiros são variáveis que ao invés de guardar um valor, eles guardam o "endereço" onde aquele valor está armazenado
+
+## Como criar
+
+### Sintaxe
+```C
+// É necessário criar uma variável normal primeiro
+tipo nomeVariavel = valor;
+
+// Ponteiro:
+tipo *nomeDoPonteiro = &nomeVariavel;
+```
+Obs: O ponteiro tem que ser do mesmo tipo da variável
+
+Explicação: O simbolo `&` retorna o endereço da valor que está na frente dele, então ao fazermos `&nomeVariavel`, ele retornará o endereço da variavel `nomeVariavel`
+O simbolo `*` mostra que o que estamos criando é um ponteiro
+
+Ex:
+```C
+
+int idade = 18;
+int *pIdade = &idade;
+
 ```
 
 
+## Como pegar o valor
+
+Para pegar o valor que um ponteiro está guardando, basta fazer o seguinte:
+
+### Sintaxe
+```C
+*nomePonteiro;
+```
+
+Ex:
+```C
+int idade = 18;
+int *pIdade = &idade;
+
+printf("%i", *pIdade);
+// O resultado será '18'
+```
+
+## Como alterar o valor
+
+Para alterar o valor que um ponteiro está guardando, basta fazer o seguinte:
+
+
+### Sintaxe
+```C
+*nomePonteiro = novoValor;
+```
+
+Ex:
+```C
+int idade = 18;
+int *pIdade = &idade;
+
+*pIdade = 19;
+
+printf("%i", *pIdade);
+// O resultado será '19'
+```
+
+# Struct
+
+Struct é uma estrutura que permite você "agrupar" um conjunto de variaveis que façam sentido juntas. Além de agrupar, você consegue criar vários structs que sigam a mesma "receita" mas que guardem valores diferentes um do outro
+
+Pense no struct como uma receita de bolo.
+A receita te permite fazer vários bolos que seguem a mesma lógica, mas que são um pouco diferentes um do outro
+
+## Como criar
+
+O struct permite você guardar quantas variaveis você quiser dentro dele e de tipos diferentes também.
+
+### Sintaxe
+
+```C
+struct nomeStruct{
+    tipo variavel1;
+    tipo variavel2;
+    tipo variavel3;
+    // Lembrando que podem ser quantas você quiser
+};
+```
+Lembre-se: Estamos criando a "receita"
+
+Ex:
+```C
+struct Pessoa{
+    char nome[100];
+    int idade;
+    float peso;
+};
+```
+
+## Como atribuir valores
+
+Para atribuir valores para um Struct, temos que criar a "receita" e depois transformar a "receita" em "bolo"
+
+### Sintaxe
+
+```C
+// Criando a "receita"
+struct nomeStruct{
+    tipo variavel1;
+    tipo variavel2;
+    tipo variavel3;
+};
+
+// Transformando a "receita" em "bolo"
+struct nomeStruct nomeDaVariavel1;
+struct nomeStruct nomeDaVariavel2;
+struct nomeStruct nomeDaVariavel3;
+// Com 1 "receita" posso fazer quantos "bolos" eu quiser
+```
+
+Ex:
+```C
+struct Aluno{
+    int nota1;
+    int nota2;
+    int nota3;
+    int nota4;
+};
+
+struct Aluno aluno1 = {7, 8, 3}; 
+struct Aluno aluno2 = {5, 3, 6};
+struct Aluno aluno3 = {2, 4, 6}; 
+```
+
+Podemos tambem atribuir o valor depois de criado
+
+```C
+struct nomeStruct nomeVariavel;
+
+nomeVariavel.nomeDoCampo = valor;
+```
+
+Ex:
+```C
+struct Aluno aluno1;
+
+aluno1.nota1 = 8;
+```
+
+## Como alterar valores
+
+Para alterar valores é bem simples
+
+### Sintaxe
+
+```C
+nomeVariavel.nomeCampo = novoValor;
+```
+
+Ex:
+```C
+struct Aluno{
+    int nota1;
+};
+
+struct Aluno aluno = {7};
+
+// Mudando o valor
+aluno.nota1 = 2;
+```
+
+## Pegar valores
+
+Para pegar os valores de um struct, basta chama-lo e especificar o campo
+
+### Sintaxe
+
+```C
+nomeVariavel.campo;
+```
+
+Ex:
+```C
+struct Aluno{
+    int nota1;
+};
+
+struct Aluno aluno = {5};
+
+printf("%i", aluno.nota1);
+// Resultado: 5
+```

@@ -1,13 +1,5 @@
 
-### Este arquivo foi feito para ajudar a lembrar os conceitos principais da linguagem Python e poderá sofrer alterações sem aviso prévio e contém erros de português visto que foi escrito com pressa!
-
-
-<!-- 
-Este tópico deve ser ignorado, pois ele é uma metodologia que uso pra ensinar quem está comigo
-### Exercicio python
-Faça um código que peça pro usuario digitar um numero até ele digitar 5, quando ele digitar 5, sai 
--->
-
+### Este arquivo foi feito para ajudar a lembrar os conceitos principais da linguagem Python e poderá sofrer alterações sem aviso prévio e contém erros de português, pois foi escrito com pressa!
 
 # Variaveis
 
@@ -450,4 +442,28 @@ for fruta in frutas:
 # Abacate
 # Mamão
 # Melancia
+```
+
+
+# Funções úteis em python
+
+Em python temos algumas funções importantes que nos ajudam
+
+## len()
+
+A função `len()` retorna o tamanho da lista ou da string que você passar pra ela
+
+```Python
+variavel = len(valor)
+```
+
+Ex:
+```Python
+lista = [1, 2, 3, 4]
+print(len(lista))
+# Resultado: 4
+
+nome = "Creuza"
+print(len(nome))
+# Resultado: 6
 ```
