@@ -258,6 +258,98 @@ do{
 
 Importante: Cuidado que caso você erre a lógica e faça um loop infinito, você pode acabar travando o computador
 
+# Funções
+
+Funções são blocos de código que podem ser reutilizados. Usamos as funções quando uma porção de código será usada várias vezes ao longo do código.
+
+## Sintaxe
+
+```C
+
+tipo nome(){
+    // Código
+}
+```
+
+Ao criarmos uma função em C, precisamos definir ela também na parte superior do código (antes da main)
+```C
+#include <stdio.h>
+
+tipo nomeDaFuncao();
+
+int main(){
+    // Código
+    return 0;
+}
+
+tipo nomeDaFuncao(){
+    // Código
+}
+```
+
+Ao criarmos uma função, precisamos chamá-la, para que rode a porção de código
+```C
+int main(){
+    nomeFuncao();
+    return 0;
+}
+
+```
+
+Ex:
+```C
+#include <stdio.h>
+
+void mostrar();
+
+int main(){
+    mostrar();
+    // Resultado: Ola mundo
+    return 0;
+}
+
+void mostrar(){
+    printf("Ola mundo");
+}
+
+```
+
+## Tipos das funções
+
+Funções podem retornar valores ao local onde foram chamadas, por isso, quando criamos uma função temos que dizer que tipo de valor ela vai retornar
+Caso a função não vá retornar nada, falamos que o tipo dela é `void`
+
+Ex sem retorno:
+```C
+
+void funcao1(){
+    printf("Ola");
+}
+
+```
+
+Ex com retorno:
+```C
+#include <stdio.h>
+
+int soma();
+
+int main(){
+    int valor = soma();
+    // O valor de retorna que virá de "soma()" será guardado na variavel "valor"
+    printf("%i", valor);
+    return 0;
+}
+
+int soma(){
+    int n1 = 5;
+    int n2 = 7;
+    int soma = n1 + n2;
+    return soma;
+}
+```
+
+
 # Array
 Arrays são variaveis que podem guardar varios valores do mesmo tipo
 
