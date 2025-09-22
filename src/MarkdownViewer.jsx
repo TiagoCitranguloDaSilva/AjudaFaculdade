@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 function MarkdownViewer(){
     const location = useLocation();
     const navigate = useNavigate();
-    const markdown = (location.state) ? useLocation().state : "Nenhum conteúdo carregado"
+    const markdown = (location.state) ? useLocation().state : "Nenhum conteúdo foi carregado"
     const handleVoltar = () => {
         navigate('/')
     }
